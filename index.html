@@ -1,0 +1,188 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>scRNA-seq review</title>
+
+	<meta name="description" content="scRNA-seq review">
+	<meta name="author" content="Viktor Petukhov">
+
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/user.css">
+	<link rel="stylesheet" href="css/theme/	sky.css" id="theme">
+	<link rel="stylesheet" href="presentable-master/src/presentable.css">
+
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/zenburn.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+	var link = document.createElement( 'link' );
+	link.rel = 'stylesheet';
+	link.type = 'text/css';
+	link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+	document.getElementsByTagName( 'head' )[0].appendChild( link );
+	</script>
+</head>
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<h2>Single-cell RNA-sequencing</h2>
+				<p align="right">
+					Viktor Petukhov
+				</p>
+			</section>
+			<section>
+				Облако
+			</section>
+			<section>
+				<h3>План</h3>
+				<ul>
+				 <li>Предыстория</li>
+				 <li>Single-Cell RNA-seq</li>
+				 <li>Секвенирование на примере InDrop</li>
+				 <li><i>Обработка данных</i></li>
+				 <li>Получение информации</li>
+				</ul>
+			</section>
+			<section>
+				<h3>План</h3>
+				<ul>
+				 <li><div id="curlist">Предыстория</div></li>
+				 <li>Single-Cell RNA-seq</li>
+				 <li>Секвенирование на примере InDrop</li>
+				 <li><i>Обработка данных</i></li>
+				 <li>Получение информации</li>
+				</ul>
+			</section>
+			<section>
+				<object data-fragment-index="4" width="100%" type="image/svg+xml" data="plots/Publications.svg" ></object>
+			</section>
+			<section>
+				Принцип работы<br>
+				<object data-fragment-index="4" width="60%" type="image/svg+xml" data="plots/pepke2009_7.svg" ></object>
+				<div id="citation">*Pepke, Shirley, Barbara Wold, et al. "Computation for ChIP-seq and RNA-seq Studies." Nature Methods 6 (2009): S22-32</div>
+			</section>
+			<section>
+				<section>
+					<h3>Возможности:</h3>
+					<ul>
+					 <li class="fragment">Поиск изоформ</li>
+					 <li class="fragment">Корреляция между генами</li>
+					 <li class="fragment">Сравнение уровней экспрессии генов (при разных условиях)</li>
+					</ul>
+					<br>
+					<div class="fragment">*David Gifford, MIT 7.91J Foundations of Computational and Systems Biology, Spring 2014</div>
+				</section>
+				<section>
+					<div id="wrapper">
+					    <div id="left1"><object data-fragment-index="4" type="image/svg+xml" data="plots/alternative_splicing.png" ></object></div>
+					    <div id="center1"> <object data-fragment-index="4" type="image/svg+xml" data="plots/alternative_splicing.png" ></object></div>
+					    <div id="right1"><object data-fragment-index="4" type="image/svg+xml" data="plots/alternative_splicing.png" ></object></div>
+					</div>
+				</section>
+				<section>
+					<h3>Поиск изоформ</h3>
+					<object data-fragment-index="4" type="image/svg+xml" data="plots/alternative_splicing.png" ></object>
+					<div id="citation">*http://rosalind.info/glossary/protein-isoform/</div>
+				</section>
+				<section>
+					<h3>Поиск изоформ</h3>
+					<object data-fragment-index="4" type="image/svg+xml" data="plots/ExonesCoverage.svg" ></object>
+					<div id="citation">*David Gifford, MIT 7.91J Foundations of Computational and Systems Biology, Spring 2014</div>
+				</section>
+			</section>
+			<section>
+				<h3>Недостатки:</h3>
+				<ul>
+				 <li class="fragment">Усреднение по многим клеткам</li>
+				 <li class="fragment">Гетерогенные области (например, мозг) анализировать нельзя</li>
+				</ul>
+			</section>
+			<section>
+				<section>
+					Решение:<br>
+					<object data-fragment-index="4" width="50%" type="image/svg+xml" data="plots/Science2013.jpg" ></object>
+				</section>
+				<section>
+					Новые возможности<br>
+					Гетерогенные популяции<br>
+					<object data-fragment-index="4" width="50%" type="image/svg+xml" data="plots/HeteroCells.svg" ></object>
+					<div id="citation">*Itay Tirosh et al., Dissecting the multicellular ecosystem of metastatic melanoma by single-cell RNA-seq. Science 352, 189 (2016)</div>
+				</section>
+				<section>
+					Новые возможности<br>
+					Сравнение двух субпопуляций<br>
+					<object data-fragment-index="4" width="50%" type="image/svg+xml" data="plots/HeteroCells.svg" ></object>
+					<div id="citation">*Itay Tirosh et al., Dissecting the multicellular ecosystem of metastatic melanoma by single-cell RNA-seq. Science 352, 189 (2016)</div>
+				</section>
+				<section>
+					Новые возможности<br>
+					Поиск малых субпопуляций<br>
+					<object data-fragment-index="4" width="70%" type="image/svg+xml" data="plots/metastasis.png" ></object>
+					<div id="citation">*Malladi et al., 2016, Cell 165, 45–60 March 24, 2016</div>
+				</section>
+				<section>
+					Новые возможности<br>
+					Клеточный цикл<br>
+					<object data-fragment-index="4" width="80%" type="image/svg+xml" data="plots/CellCycle.jpg" ></object>
+				</section>
+			</section>
+			<section>
+				Результаты:<br>
+				<object data-fragment-index="4" width="80%" type="image/svg+xml" data="plots/LibrarySizes.svg" ></object>
+			</section>
+		</div>
+	</div>
+
+	<script src="lib/js/head.min.js"></script>
+	<script src="js/reveal.js"></script>
+
+	<script>
+	// More info https://github.com/hakimel/reveal.js#configuration
+	Reveal.initialize({
+		history: true,
+		transition: 'none',
+		slideNumber: "c.v/t",
+
+		// More info https://github.com/hakimel/reveal.js#dependencies
+		dependencies: [
+			{ src: 'plugin/markdown/marked.js' },
+			{ src: 'plugin/markdown/markdown.js' },
+			{ src: 'plugin/notes/notes.js', async: true },
+			{ src: 'plugin/math/math.js', async: true },
+			{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+		]
+	});
+
+	// Code to reflect actual slide number instead of using flattened slide number - does NOT work on speaker notes
+	var horzSlideCnt = document.querySelectorAll( '.reveal .slides>section' ).length;
+
+	// Update slide number for 1st slide where slidechanged event has not been triggered
+	Reveal.addEventListener('ready', function (event) {
+		Reveal.configure({
+			slideNumber: "c.1/" + horzSlideCnt
+		});
+	});
+
+	// Update slide number to reflect actual horizontal/vertical slide numbers (indexh/indexv are zero-based)
+	Reveal.addEventListener('slidechanged', function (event) {
+		var slideNumberField = document.querySelector('.reveal .slide-number'),
+		slideNumber = (event.indexh + 1) + "." + (event.indexv + 1) + '/' + horzSlideCnt,
+		interval;
+
+		// Unable to set innerHTML straightaway without use of setInterval() as element may be re-created after event
+		interval = window.setInterval(
+			function () {
+				slideNumberField.innerHTML = slideNumber;
+				clearInterval(interval);
+			},
+			10
+		);
+	});
+	</script>
+</body>
+</html>
