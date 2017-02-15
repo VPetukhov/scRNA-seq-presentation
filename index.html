@@ -9,13 +9,14 @@
 	<meta name="description" content="scRNA-seq review">
 	<meta name="author" content="Viktor Petukhov">
 
-	<link rel="stylesheet" href="css/reveal.css">
 	<link rel="stylesheet" href="css/user.css">
+	<link rel="stylesheet" href="css/reveal.css">
 	<link rel="stylesheet" href="css/theme/	sky.css" id="theme">
 	<link rel="stylesheet" href="presentable-master/src/presentable.css">
 
 	<!-- Theme used for syntax highlighting of code -->
 	<link rel="stylesheet" href="lib/css/zenburn.css">
+	<link rel="stylesheet" href="css/user.css">
 
 	<!-- Printing and PDF exports -->
 	<script>
@@ -41,17 +42,18 @@
 			<section>
 				<h3>План</h3>
 				<ul>
-				 <li>Предыстория</li>
+				 <li>Введение</li>
 				 <li>Single-Cell RNA-seq</li>
 				 <li>Секвенирование на примере InDrop</li>
 				 <li><i>Обработка данных</i></li>
 				 <li>Получение информации</li>
 				</ul>
 			</section>
+			<!-- Intro -->
 			<section>
 				<h3>План</h3>
 				<ul>
-				 <li><div id="curlist">Предыстория</div></li>
+				 <li class="cur_list">Введение</li>
 				 <li>Single-Cell RNA-seq</li>
 				 <li>Секвенирование на примере InDrop</li>
 				 <li><i>Обработка данных</i></li>
@@ -59,41 +61,32 @@
 				</ul>
 			</section>
 			<section>
-				<object data-fragment-index="4" width="100%" type="image/svg+xml" data="plots/Publications.svg" ></object>
+				Число публикаций с тегом "RNA-seq"<br>
+				<object data-fragment-index="4" width="95%" type="image/svg+xml" data="plots/Publications.svg" ></object>
 			</section>
 			<section>
 				Принцип работы<br>
 				<object data-fragment-index="4" width="60%" type="image/svg+xml" data="plots/pepke2009_7.svg" ></object>
-				<div id="citation">*Pepke, Shirley, Barbara Wold, et al. "Computation for ChIP-seq and RNA-seq Studies." Nature Methods 6 (2009): S22-32</div>
+				<div class="citation">*Pepke, Shirley, Barbara Wold, et al. "Computation for ChIP-seq and RNA-seq Studies." Nature Methods 6 (2009): S22-32</div>
 			</section>
 			<section>
-				<section>
-					<h3>Возможности:</h3>
-					<ul>
-					 <li class="fragment">Поиск изоформ</li>
-					 <li class="fragment">Корреляция между генами</li>
-					 <li class="fragment">Сравнение уровней экспрессии генов (при разных условиях)</li>
-					</ul>
-					<br>
-					<div class="fragment">*David Gifford, MIT 7.91J Foundations of Computational and Systems Biology, Spring 2014</div>
-				</section>
-				<section>
-					<div id="wrapper">
-					    <div id="left1"><object data-fragment-index="4" type="image/svg+xml" data="plots/alternative_splicing.png" ></object></div>
-					    <div id="center1"> <object data-fragment-index="4" type="image/svg+xml" data="plots/alternative_splicing.png" ></object></div>
-					    <div id="right1"><object data-fragment-index="4" type="image/svg+xml" data="plots/alternative_splicing.png" ></object></div>
-					</div>
-				</section>
-				<section>
-					<h3>Поиск изоформ</h3>
-					<object data-fragment-index="4" type="image/svg+xml" data="plots/alternative_splicing.png" ></object>
-					<div id="citation">*http://rosalind.info/glossary/protein-isoform/</div>
-				</section>
-				<section>
-					<h3>Поиск изоформ</h3>
-					<object data-fragment-index="4" type="image/svg+xml" data="plots/ExonesCoverage.svg" ></object>
-					<div id="citation">*David Gifford, MIT 7.91J Foundations of Computational and Systems Biology, Spring 2014</div>
-				</section>
+				<h4>Возможности:</h4>
+		    <div class="fragment left3">
+					<h6>Поиск изоформ</h6>
+					<object data-fragment-index="4"  width="100%" type="image/svg+xml" data="plots/alternative_splicing.png" ></object>
+					<object data-fragment-index="4" width="100%" type="image/svg+xml" data="plots/ExonesCoverage.svg" ></object>
+					<div class="citation">*http://rosalind.info/glossary/protein-isoform/</div>
+					<div class="citation">David Gifford, MIT 7.91J Foundations of Computational and Systems Biology, Spring 2014</div>
+				</div>
+		    <div class="center3 fragment">
+					<h6>Дифф. экспрессия</h6>
+					<object data-fragment-index="4" type="image/svg+xml" width="100%" data="plots/diff_expression.png" ></object>
+					<div class="citation">Medina et al. 2010. Babelomics: an integrative platform for the analysis of transcriptomics, proteomics and genomic data with advanced functional profiling. Nucleic Acids Research (Web Server issue).</div>
+				</div>
+		    <div class="right3 fragment">
+					<h6>Взаимодействие генов</h6>
+					<object data-fragment-index="4" width="100%" type="image/svg+xml" data="plots/genes_regulation.svg" ></object>
+				</div>
 			</section>
 			<section>
 				<h3>Недостатки:</h3>
@@ -103,37 +96,276 @@
 				</ul>
 			</section>
 			<section>
-				<section>
-					Решение:<br>
-					<object data-fragment-index="4" width="50%" type="image/svg+xml" data="plots/Science2013.jpg" ></object>
-				</section>
+				<div class="left">
+					<object data-fragment-index="4" width="100%" type="image/svg+xml" data="plots/questions.jpg" ></object>
+				</div>
+				<div class="right">
+					<br>
+					<ul>
+					 <li class="cur_list">Введение</li>
+					 <li>Single-Cell RNA-seq</li>
+					 <li>Секвенирование на примере InDrop</li>
+					 <li><i>Обработка данных</i></li>
+					 <li>Получение информации</li>
+					</ul>
+				</div>
+			</section>
+
+			<!-- scRNA-seq -->
+
+			<section>
+				<div class="left">
+					<br>
+					<ul>
+					 <li>Введение</li>
+					 <li class="cur_list">Single-Cell RNA-seq</li>
+					 <li>Секвенирование на примере InDrop</li>
+					 <li><i>Обработка данных</i></li>
+					 <li>Получение информации</li>
+					</ul>
+				</div>
+				<div class="right">
+					<object data-fragment-index="4" width="100%" type="image/svg+xml" data="plots/Science2013.jpg" ></object>
+				</div>
+			</section>
+			<section>
 				<section>
 					Новые возможности<br>
 					Гетерогенные популяции<br>
 					<object data-fragment-index="4" width="50%" type="image/svg+xml" data="plots/HeteroCells.svg" ></object>
-					<div id="citation">*Itay Tirosh et al., Dissecting the multicellular ecosystem of metastatic melanoma by single-cell RNA-seq. Science 352, 189 (2016)</div>
+					<div class="citation">*Itay Tirosh et al., Dissecting the multicellular ecosystem of metastatic melanoma by single-cell RNA-seq. Science 352, 189 (2016)</div>
 				</section>
 				<section>
 					Новые возможности<br>
-					Сравнение двух субпопуляций<br>
-					<object data-fragment-index="4" width="50%" type="image/svg+xml" data="plots/HeteroCells.svg" ></object>
-					<div id="citation">*Itay Tirosh et al., Dissecting the multicellular ecosystem of metastatic melanoma by single-cell RNA-seq. Science 352, 189 (2016)</div>
+					Сравнение субпопуляций<br>
+					<object data-fragment-index="4" width="50%" type="image/svg+xml" data="plots/HeteroCells2.svg" ></object>
+					<div class="citation">*Itay Tirosh et al., Dissecting the multicellular ecosystem of metastatic melanoma by single-cell RNA-seq. Science 352, 189 (2016)</div>
+				</section>
+				<section>
+					Новые возможности<br>
+					Сравнение субпопуляций<br>
+					<object data-fragment-index="4" width="50%" type="image/svg+xml" data="plots/drug_cancer3.svg" ></object>
+					<div class="citation">*Itay Tirosh et al., Dissecting the multicellular ecosystem of metastatic melanoma by single-cell RNA-seq. Science 352, 189 (2016)</div>
 				</section>
 				<section>
 					Новые возможности<br>
 					Поиск малых субпопуляций<br>
 					<object data-fragment-index="4" width="70%" type="image/svg+xml" data="plots/metastasis.png" ></object>
-					<div id="citation">*Malladi et al., 2016, Cell 165, 45–60 March 24, 2016</div>
+					<div class="citation">*Malladi et al., 2016, Cell 165, 45–60 March 24, 2016</div>
 				</section>
 				<section>
 					Новые возможности<br>
 					Клеточный цикл<br>
-					<object data-fragment-index="4" width="80%" type="image/svg+xml" data="plots/CellCycle.jpg" ></object>
+					<div class="left"><object data-fragment-index="4" width="150%" type="image/svg+xml" data="plots/CellCycle.jpg" ></object></div>
+					<div class="right"><object data-fragment-index="4" width="50%" type="image/svg+xml" data="plots/cyclines.svg" ></object></div>
+					<!-- <div class="citation">*Leng N. et al., 2015, Nat. Methods. Oscope identifies oscillatory genes in unsynchronized single-cell RNA-seq experiments</div> -->
 				</section>
 			</section>
 			<section>
-				Результаты:<br>
-				<object data-fragment-index="4" width="80%" type="image/svg+xml" data="plots/LibrarySizes.svg" ></object>
+				<section>
+					Развитие:<br>
+					<object data-fragment-index="4" width="80%" type="image/svg+xml" data="plots/LibrarySizes.svg" ></object>
+					<div class="citation">*Kumar P, et al., Understanding development and stem cells using single cell-based analyses of gene expression, Development (2017) 144, 17-32</div>
+				</section>
+				<section>
+					Развитие 2017:<br>
+					<object data-fragment-index="4" width="50%" type="image/svg+xml" data="plots/10X.jpg" ></object><br>
+					<big>1.3 миллиона клеток (mouse brain)</big>
+					<div class="citation">*https://support.10xgenomics.com/single-cell/datasets/1M_neurons</div>
+				</section>
+			</section>
+
+			<!-- InDrop -->
+
+			<section>
+				<div class="left">
+					<br>
+					<ul>
+					 <li>Введение</li>
+					 <li>Single-Cell RNA-seq</li>
+					 <li class="cur_list">Секвенирование на примере InDrop</li>
+					 <li><i>Обработка данных</i></li>
+					 <li>Получение информации</li>
+					</ul>
+				</div>
+				<div class="right">
+					<!-- <object data-fragment-index="4" width="100%" type="image/svg+xml" data="plots/Science2013.jpg" ></object> -->
+					<div class="citation">*Klein et al., 2015, Cell 161, 1187–1201 May 21, 2015</div>
+				</div>
+			</section>
+			<section>
+				Разделение на капли.
+			</section>
+			<section>
+				RT + amplification InDrop
+			</section>
+			<section>
+				amplification, IVT
+			</section>
+			<section>
+				amplification, IVT
+			</section>
+			<section>
+				<object data-fragment-index="4" width="100%" type="image/svg+xml" data="plots/InDropBarcoding.svg" ></object>
+			</section>
+			<section>
+				<section>
+					<h4>UMI</h4>
+					<object data-fragment-index="4" width="80%" type="image/svg+xml" data="plots/UMI_pool.png" ></object>
+					<div class="citation">*Fu, G.K., Hu, J., Wang, P.H., and Fodor, S.P. (2011). Counting individual DNA molecules by the stochastic attachment of diverse labels. Proc. Natl. Acad. Sci. USA 108, 9026–9031</div>
+				</section>
+				<section>
+					Достаточно использовать уникальности UMI только в локальной области.
+					<div class="fragment">Недостаток - UMI приклеиваются только к 3'-5' нити, так что нелзя исследовать аллельную специфичность.</div>
+				</section>
+			</section>
+			<section>
+				Spike-ins
+				<div class="fragment">Недостаток Spike-ins оттягивают на себя часть прочтений.</div>
+			</section>
+			<section>
+				<object data-fragment-index="4" width="100%" type="image/svg+xml" data="plots/InDropBarcoding.svg" ></object>
+			</section>
+			<section>
+				Выравнивание, подсчёт count matrix
+			</section>
+			<section>
+				<div class="left">
+					<object data-fragment-index="4" width="100%" type="image/svg+xml" data="plots/questions.jpg" ></object>
+				</div>
+				<div class="right">
+					<br>
+					<ul>
+					 <li>Введение</li>
+					 <li>Single-Cell RNA-seq</li>
+					 <li class="cur_list">Секвенирование на примере InDrop</li>
+					 <li><i>Обработка данных</i></li>
+					 <li>Получение информации</li>
+					</ul>
+				</div>
+			</section>
+
+			<!-- Data processing -->
+
+			<section>
+				<div class="left">
+					<br>
+					<ul>
+					 <li>Введение</li>
+					 <li>Single-Cell RNA-seq</li>
+					 <li>Секвенирование на примере InDrop</li>
+					 <li class="cur_list"><i>Обработка данных</i></li>
+					 <li>Получение информации</li>
+					</ul>
+				</div>
+				<div class="right">
+
+				</div>
+			</section>
+			<section>
+				<div class="left">count matrix</div>
+				<div class="right">
+					<ol>
+					 <li class="fragment">Нормализация</li>
+					 <li class="fragment">Оценить качество</li>
+					 <li class="fragment">Посмотреть глазами</li>
+				 </ol>
+				</div>
+			</section>
+			<section>
+				<section>
+					<h4>Нормализация</h4>
+					<div class="fragment left">Выбор алгоритма нормализации влияет на оценку диффиренциальной экспрессии сильнее, чем выбор алгоритма оценки.</div>
+					<div class="right">
+						<div class="fragment">$CPM_i=\frac{X_i}{N}10^6$</div>
+						<br>
+						<div class="fragment">$FPKM_i=\frac{X_i}{l_iN}10^9$</div>
+						<br>
+						<div class="fragment">$TPM_i=\frac{\frac{X_i}{l_i}}{\sum_j\frac{X_j}{l_j}}10^9$</div>
+					</div>
+				</section>
+				<section>
+					<h4>TMM алгоритм (Trimmed means of M-values)</h4>
+					<div class="left">
+						<div class="fragment">TMP можно сломать простым мысленным экспериментом.</div>
+						<br>
+						<div class="fragment">Новая идея - большинство генов не являются DE.</div>
+					</div>
+					<div class="right fragment">
+						$M^r_{gk}=\frac{log_2{Y_{gk}/N_{k}}}{log_2{Y_{gr}/N_{r}}}$<br><br>
+						$log_2(TMM^r_k)=\frac{\sum_g w^r_{gk}M^r_{gk}}{\sum_g w^r_{gk}}$<br>
+						$w^r_{gk}=\frac{N_k-Y_{gk}}{N_kY_{gk}} + \frac{N_r-Y_{gr}}{N_rY_{gr}}$
+					</div>
+					<div class="footer">
+						<br>
+						<div class="citation">*Robinson, MD, and Oshlack, A (2010). A scaling normalization method for differential expression analysis of RNA-seq data. Genome Biology 11, R25.</div>
+					</div>
+				</section>
+				<section>
+					<h4>Single-cell latent variable model (scLVM)</h4>
+					<small>
+					<ul>
+						<li>$y_g$ - экспрессии гена по всем клеткам.</li>
+						<li>Его вариация зависит от известного набора генов $X$, технической вариабельности $v_g^2$ и биологической вариабельности $\delta_g^2$.</li>
+						<li>Ужмём размерность X с помощью Gaussian Process Latent variable model (вариация на тему kernel PCA), получим $\tilde{X}$.</li>
+						<li>Матрица ковариации: $\Sigma=\tilde{X}\tilde{X}^T$.</li>
+						<li>$y_g$~$N(\mu_g\mathbb{1}, \tilde{X}X^T + v_g^2I + \delta_g^2I)$</li>
+						<li>
+							Чтобы учесть H факторов (наборов генов):<br>
+							$y_g$~$N(\mu_g\mathbb{1}, \sum_{h=1}^H\sigma_{gh}^2\Sigma_h + v_g^2I + \delta_g^2I)$
+						</li>
+					</ul>
+					</small>
+				</section>
+				<section>
+					<h4>Single-cell latent variable model (scLVM)</h4>
+					<div class="citation">*Buettner F, Natarajan KN, Casale FP, Proserpio V, Scialdone A, Theis FJ, et al. Computational analysis of cell-to-cell heterogeneity in single-cell RNA-sequencing data reveals hidden subpopulations of cells. Nat Biotechnol. 2015;33:155–60.</div>
+				</section>
+			</section>
+			<section>
+				<section>
+					Визуализация<br>
+					<object data-fragment-index="4" width="100%" type="image/svg+xml" data="plots/matrix_neo.svg" ></object>
+				</section>
+				<section>
+					<h4>FastProject</h4>
+					<div class="citation">*Buettner F, Natarajan KN, Casale FP, Proserpio V, Scialdone A, Theis FJ, et al. Computational analysis of cell-to-cell heterogeneity in single-cell RNA-sequencing data reveals hidden subpopulations of cells. Nat Biotechnol. 2015;33:155–60.</div>
+				</section>
+				<section data-transition="none">
+					<h4>SIMLR</h4>
+					<small>
+						Задача: при известном числе кластеров $C$ найти наилучшую проекцию, разделяющую эти кластера.<br><br>
+						$\underset{S,L,w}{minimize}\underset{i,j}{\sum}D(x_i,x_j)S_{ij} +
+						\beta\left\lVert S\right\rVert_F^2 + \gamma \mathbb{tr}(L^T(I_N-S)L) +
+						\rho \underset{i}{\sum}w_ilog(w_i)$
+						<br><br>
+						$D(x_i,x_j)=\sum_i w_i D_i(x_i,x_j);\ \sum_i w_i=1;\ w_i \ge 0;\
+						L^TL=I_C;\ \sum_j S_{ij}=1, S_{ij} \ge 0\ for\ all\ (i,j)$
+					</small><br><br>
+					<div class="citation">*Wang B, et al., Visualization and analysis of single-cell RNA-seq data by kernel-based similarity learning. doi: https://doi.org/10.1101/052225</div>
+				</section>
+				<section data-transition="none">
+					<h4>SIMLR</h4>
+					<small>
+						Задача: при известном числе кластеров $C$ найти наилучшую проекцию, разделяющую эти кластера.<br><br>
+						<b>$\underset{S,L,w}{minimize}\underset{i,j}{\sum}D(x_i,x_j)S_{ij} +
+						\beta\left\lVert S\right\rVert_F^2 + \gamma \mathbb{tr}(L^T(I_N-S)L) +
+						\rho \underset{i}{\sum}w_ilog(w_i)$</b><br><br>
+						$D(x_i,x_j)=\sum_i w_i D_i(x_i,x_j);\ \sum_i w_i=1;\ w_i \ge 0;\
+						L^TL=I_C;\ \sum_j S_{ij}=1, S_{ij} \ge 0\ for\ all\ (i,j)$
+					</small><br><br>
+					<div class="citation">*Wang B, et al., Visualization and analysis of single-cell RNA-seq data by kernel-based similarity learning. doi: https://doi.org/10.1101/052225</div>
+				</section>
+				<section data-transition="none">
+					<h4>SIMLR</h4>
+					Plots
+					<div class="citation">*Wang B, et al., Visualization and analysis of single-cell RNA-seq data by kernel-based similarity learning. doi: https://doi.org/10.1101/052225</div>
+				</section>
+			</section>
+			<section>
+				<h4>Quality control</h4>
+				
+				<div class="citation">*Wang B, et al., Visualization and analysis of single-cell RNA-seq data by kernel-based similarity learning. doi: https://doi.org/10.1101/052225</div>
 			</section>
 		</div>
 	</div>
@@ -145,7 +377,8 @@
 	// More info https://github.com/hakimel/reveal.js#configuration
 	Reveal.initialize({
 		history: true,
-		transition: 'none',
+		// transition: 'none',
+		transitionSpeed: 'fast',
 		slideNumber: "c.v/t",
 
 		// More info https://github.com/hakimel/reveal.js#dependencies

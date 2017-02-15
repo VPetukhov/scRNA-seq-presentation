@@ -1,12 +1,13 @@
-#left {
+.left {
   left:-8.33%;
   text-align: left;
   float: left;
-  width:50%;
+  width:45%;
   z-index:-10;
+  margin: 0 3px;
 }
 
-#right {
+.right {
   left:31.25%;
   top: 75px;
   float: right;
@@ -15,40 +16,39 @@
   width:50%;
 }
 
-#citation {
+.footer {
+  clear:both;
+}
+
+div.citation {
   font-style: italic;
   font-size: small;
 }
 
-#curlist {
-  font-style: bold;
+li.cur_list {
+  font-weight: bold;
 }
 
 
-#left1 {
-    position:absolute;
-    left:-20%;
+div.left3 {
+    float:left;
     width:30%;
-    height:100%;
+    /*height:100%;*/
 }
 
-#center1 {
-    height:100%;
-    /*width:30%;*/
-    margin: 0 50px;
+div.center3 {
+    /*height:100%;*/
+    width:30%;
+    /*left:100%;*/
+    float:left;
+    margin: 0 20px;
 }
 
-#right1 {
-    position:absolute;
-    right:0;
+div.right3 {
+    /*position:absolute;*/
+    /*right:0;*/
     /*top:5%;*/
+    float:left;
     width:30%;
-    height:100%;
-}
-
-body, html, #wrapper {
-    width:100%;
-    height:100%;
-    padding:0;
-    margin:0;
+    /*height:100%;*/
 }
