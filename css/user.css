@@ -20,6 +20,12 @@
   clear:both;
 }
 
+div.header {
+  float: center
+  font-family: Verdana, Geneva, sans-serif
+  font-size: 500%;
+}
+
 div.citation {
   font-style: italic;
   font-size: small;
@@ -27,6 +33,11 @@ div.citation {
 
 li.cur_list {
   font-weight: bold;
+}
+
+li.optional_list {
+  color: #808080;
+  font-style: italic;
 }
 
 
