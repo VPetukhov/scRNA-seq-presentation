@@ -62,7 +62,6 @@
 			</section>
 			<section>
 				<div class="header">Число публикаций с тегом "RNA-seq"</div>
-				<br>
 				<object width="90%" type="image/svg+xml" data="plots/Publications.svg" ></object>
 			</section>
 			<section>
@@ -72,19 +71,19 @@
 			</section>
 			<section>
 				<b>Возможности</b><br>
-		    <div class="left3">
+		    <div class="left3 fragment">
 					Поиск изоформ<br>
 					<object  width="100%" type="image/svg+xml" data="plots/alternative_splicing.png" ></object>
 					<object width="100%" type="image/svg+xml" data="plots/ExonesCoverage.svg" ></object>
 					<div class="citation">*http://rosalind.info/glossary/protein-isoform/</div>
 					<div class="citation">David Gifford, MIT 7.91J Foundations of Computational and Systems Biology, Spring 2014</div>
 				</div>
-		    <div class="center3">
+		    <div class="center3 fragment">
 					Дифф. экспрессия<br>
 					<object type="image/svg+xml" width="100%" data="plots/diff_expression.png" ></object>
 					<div class="citation">Medina et al. 2010. Babelomics: an integrative platform for the analysis of transcriptomics, proteomics and genomic data with advanced functional profiling. Nucleic Acids Research (Web Server issue).</div>
 				</div>
-		    <div class="right3">
+		    <div class="right3 fragment">
 					Взаимодействие генов<br>
 					<object width="100%" type="image/svg+xml" data="plots/genes_regulation.svg" ></object>
 				</div>
@@ -114,21 +113,6 @@
 
 			<!-- scRNA-seq -->
 
-			<section>
-				<div class="left">
-					<br>
-					<ul>
-					 <li>Введение</li>
-					 <li class="cur_list">Single-Cell RNA-seq</li>
-					 <li>Секвенирование на примере InDrop</li>
-					 <li class="optional_list">Обработка данных</li>
-					 <li>Дополнительный анализ</li>
-					</ul>
-				</div>
-				<div class="right">
-					<object width="100%" type="image/svg+xml" data="plots/Science2013.jpg" ></object>
-				</div>
-			</section>
 			<section  data-background-color="#000000">
 				<div class="left">
 					<br>
@@ -209,22 +193,26 @@
 				</div>
 			</section>
 			<section>
-				Разделение на капли.
+				Разделение на капли
+				<br>
 				<object width="100%" type="image/svg+xml" data="plots/InDrop_mechanism.svg" ></object><br>
 				<div class="citation">*Klein et al., 2015, Cell 161, 1187–1201 May 21, 2015</div>
 			</section>
 			<section>
-				RT + amplification InDrop
+				RT + InDrop barcoding
+				<br>
 				<object width="90%" type="image/svg+xml" data="plots/InDrop_seq.svg" ></object><br>
 				<div class="citation">*Klein et al., 2015, Cell 161, 1187–1201 May 21, 2015</div>
 			</section>
 			<section>
 				Amplification
+				<br>
 				<object width="80%" type="image/svg+xml" data="plots/amplification.svg" ></object><br>
 			</section>
 			<section>
 				In vitro transcription
-				<object width="40%" type="image/svg+xml" data="plots/IVTamplification.svg" ></object>
+				<br>
+				<object width="50%" type="image/svg+xml" data="plots/IVTamplification.svg" ></object>
 			</section>
 			<section>
 				<object width="100%" type="image/svg+xml" data="plots/InDropBarcoding.svg" ></object>
@@ -236,13 +224,20 @@
 					<div class="citation">*Fu, G.K., Hu, J., Wang, P.H., and Fodor, S.P. (2011). Counting individual DNA molecules by the stochastic attachment of diverse labels. Proc. Natl. Acad. Sci. USA 108, 9026–9031</div>
 				</section>
 				<section>
-					Достаточно использовать уникальности UMI только в локальной области.
-					<div class="fragment">Недостаток - UMI приклеиваются только к 3'-5' нити, так что нелзя исследовать аллельную специфичность.</div>
+					Достаточно использовать уникальности UMI только в локальной области
+					<br>
+					<br>
+				<div class="left">
+					<object width="100%" type="image/svg+xml" data="plots/rna_seq2.svg" ></object>
+				</div>
+				<div class="right">
+					<div >Недостаток - UMI приклеиваются только к 3'-5' нити, так что нелзя исследовать аллельную специфичность.</div>
+				</div>
 				</section>
 			</section>
 			<section>
 				<h5>Spike-ins</h5>
-				<object width="80%" type="image/svg+xml" data="plots/spike_ins.jpg" ></object>
+				<object width="70%" type="image/svg+xml" data="plots/spike_ins.jpg" ></object>
 				<div class="fragment">Недостаток Spike-ins оттягивают на себя часть прочтений.</div>
 			</section>
 			<section>
@@ -250,6 +245,14 @@
 			</section>
 			<section>
 				Выравнивание, подсчёт count matrix
+				<br>
+				<div class="left">
+					<object data-fragment-index="4" width="100%" type="image/svg+xml" data="plots/rna_seq2.svg" ></object>
+				</div>
+				<div class="right">
+                                        <br>
+					<object data-fragment-index="4" width="100%" type="image/svg+xml" data="plots/count_matrix1.jpg" ></object>
+				</div>
 			</section>
 			<section>
 				<div class="left">
@@ -285,9 +288,13 @@
 				</div>
 			</section>
 			<section>
-				<div class="left">count matrix</div>
+				<div class="left">Count matrix
+                                        <br>
+                                	<object data-fragment-index="4" width="110%" type="image/svg+xml" data="plots/count_matrix1.jpg" ></object>
+                                </div>
 				<div class="right">
 					<ol>
+					 <br>
 					 <li class="fragment">Нормализация</li>
 					 <li class="fragment">Оценить качество</li>
 					 <li class="fragment">Посмотреть глазами</li>
@@ -341,6 +348,7 @@
 				</section>
 				<section>
 					<h4>Single-cell latent variable model (scLVM)</h4>
+					<object data-fragment-index="4" width="50%" type="image/svg+xml" data="plots/beuttner2015_2a.png" ></object>
 					<div class="citation">*Buettner F, Natarajan KN, Casale FP, Proserpio V, Scialdone A, Theis FJ, et al. Computational analysis of cell-to-cell heterogeneity in single-cell RNA-sequencing data reveals hidden subpopulations of cells. Nat Biotechnol. 2015;33:155–60.</div>
 				</section>
 			</section>
@@ -380,7 +388,12 @@
 				</section>
 				<section data-transition="none">
 					<h4>SIMLR</h4>
-					Plots
+					<object data-fragment-index="4" width="80%" type="image/svg+xml" data="plots/SIMLR_1.svg"></object>
+					<div class="citation">*Wang B, et al., Visualization and analysis of single-cell RNA-seq data by kernel-based similarity learning. doi: https://doi.org/10.1101/052225</div>
+				</section>
+				<section data-transition="none">
+					<h4>SIMLR</h4>
+					<object data-fragment-index="4" width="80%" type="image/svg+xml" data="plots/SIMLR-2.svg"></object>
 					<div class="citation">*Wang B, et al., Visualization and analysis of single-cell RNA-seq data by kernel-based similarity learning. doi: https://doi.org/10.1101/052225</div>
 				</section>
 			</section>
@@ -397,7 +410,7 @@
 					<h4>Quality control</h4>
 					<div class="fragment">
 						<h4>Classification of low quality cells</h4>
-						<object width="100%" type="image/svg+xml" data="plots/scater.png"></object>
+						<object width="80%" type="image/svg+xml" data="plots/quality_paper.png"></object>
 						<div class="citation">*Ilicic T, et al., Classification of low quality cells from single-cell RNA-seq data, Genome Biology (2016) 17:29 </div>
 					</div>
 				</section>
