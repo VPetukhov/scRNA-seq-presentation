@@ -8,6 +8,11 @@ div.left {
   font-size: 80%;
 }
 
+div.myh {
+  font-weight: bold;
+  margin: 3px 0;
+}
+
 div.right {
   left:31.25%;
   top: 75px;
@@ -23,9 +28,7 @@ div.right {
 }
 
 div.header {
-  float: center
-  font-family: Verdana, Geneva, sans-serif
-  font-size: 500%;
+
 }
 
 div.citation {
