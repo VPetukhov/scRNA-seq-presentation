@@ -1,4 +1,4 @@
-div.left {
+.left {
   left:-8.33%;
   text-align: left;
   float: left;
@@ -8,12 +8,7 @@ div.left {
   font-size: 80%;
 }
 
-div.myh {
-  font-weight: bold;
-  margin: 3px 0;
-}
-
-div.right {
+.right {
   left:31.25%;
   top: 75px;
   float: right;
@@ -21,6 +16,12 @@ div.right {
   z-index:-10;
   width:50%;
   font-size: 80%;
+}
+
+
+div.myh {
+  font-weight: bold;
+  margin: 3px 0;
 }
 
 .footer {
@@ -60,6 +61,14 @@ div.center3 {
     margin: 0 20px;
 }
 
+.float_left {
+  float:left;
+}
+
+.float_right {
+  float:left;
+}
+
 div.right3 {
     /*position:absolute;*/
     /*right:0;*/
@@ -67,4 +76,20 @@ div.right3 {
     float:left;
     width:30%;
     /*height:100%;*/
+}
+
+.OutlineText {
+    font: Tahoma, Geneva, sans-serif;
+    color: white;
+    /*text-transform: uppercase;*/
+    text-shadow:
+    /* Outline */
+    -1px -1px 0 #000000,
+    1px -1px 0 #000000,
+    -1px 1px 0 #000000,
+    1px 1px 0 #000000,
+    -2px 0 0 #000000,
+    2px 0 0 #000000,
+    0 2px 0 #000000,
+    0 -2px 0 #000000; /* Terminate with a semi-colon */
 }

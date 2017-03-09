@@ -30,43 +30,85 @@
 <body>
   <div class="reveal">
     <div class="slides">
-      <section>
-        <h2>Single-cell RNA-sequencing</h2>
-        <p align="right">Viktor Petukhov</p>
+      <section data-background-image='plots/molecules2.jpg'>
+        <!-- <h2 style="color:#FFFFFF;text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;">Single-cell RNA-sequencing</h2> -->
+        <h2><div class="OutlineText">Single-cell RNA-sequencing</div></h2>
+        <p align="right" class="OutlineText">Viktor Petukhov</p>
       </section>
       <section>
-        <object width="100%" type="image/svg+xml" data="plots/cl_question1.jpg"></object>
+        <object width="100%" type="image/svg+xml" data="plots/questions1.jpg"></object>
       </section>
       <section>
         <h3>План</h3>
         <ul>
-          <li>Введение</li>
-          <li>Single-Cell RNA-seq</li>
-          <li>Секвенирование на примере InDrop</li>
-          <li class="optional_list">Обработка данных</li>
-          <li>Дополнительный анализ</li>
+          <li class="left"><strike>Методы</strike></li>
+          <!-- <object width="20%" type="image/svg+xml" data="plots/Intro/tools1.png" class="float_right"></object> -->
+          <li class="left">Биология</li>
+          <!-- <object width="20%" type="image/svg+xml" data="plots/Intro/biology.png" class="float_right"></object> -->
+          <li class="left">Приложения</li>
+          <!-- <object width="20%" type="image/svg+xml" data="plots/Intro/applications.png" class="float_right"></object> -->
+          <li class="left">Задачи</li>
+          <!-- <object width="20%" type="image/svg+xml" data="plots/Intro/tasks.png" class="float_right"></object> -->
         </ul>
       </section>
-      <!-- Intro -->
+      <!-- Biology -->
       <section>
-        <h3>План</h3>
-        <ul>
-          <li class="cur_list">Введение</li>
-          <li>Single-Cell RNA-seq</li>
-          <li>Секвенирование на примере InDrop</li>
-          <li class="optional_list">Обработка данных</li>
-          <li>Дополнительный анализ</li>
-        </ul>
+        <div class="myh">Постановка задачи</div>
+        <object width="90%" class="left" type="image/svg+xml" data="plots/Biology/group_of_mice.jpg"></object>
+        <object width="90%" class="right" type="image/svg+xml" data="plots/Biology/drunk_mouse.jpg"></object>
       </section>
       <section>
-        <div class="myh">Число публикаций с тегом "RNA-seq"</div>
-        <object width="90%" type="image/svg+xml" data="plots/Publications.svg"></object>
+        <section data-transition="none">
+          <div class="myh">Cell processes</div>
+          <object width="80%" type="image/svg+xml" data="plots/Biology/simple_dogma.svg"></object>
+        </section>
+        <section data-transition="none">
+          <div class="myh">Cell processes</div>
+          <object width="80%" type="image/svg+xml" data="plots/Biology/regulation.svg"></object>
+        </section>
+        <section data-transition="none">
+          <div class="myh">Cell processes</div>
+          <object width="80%" type="image/svg+xml" data="plots/Biology/epigenetic.svg"></object>
+        </section>
+        <section data-transition="none">
+          <div class="myh">Cell processes</div>
+          <object width="80%" type="image/svg+xml" data="plots/Biology/full_scheme.svg"></object>
+        </section>
+      </section>
+
+      <!-- Bulk RNA-seq -->
+      <section data-transition="none">
+        <section data-transition="none">
+          <div class="myh">Cell processes</div>
+          <object width="80%" type="image/svg+xml" data="plots/Biology/simple_dogma.svg"></object>
+        </section>
+        <section data-transition="none">
+          <div class="myh">Cell processes</div>
+          <object width="80%" type="image/svg+xml" data="plots/Bulk/full_dogma.svg"></object>
+        </section>
       </section>
       <section>
-        <div class="myh">bulk RNA-seq</div>
-        <object width="60%" type="image/svg+xml" data="plots/pepke2009_7.svg" ></object>
-        <div class="citation">*Pepke, Shirley, Barbara Wold, et al. "Computation for ChIP-seq and RNA-seq Studies." Nature Methods 6 (2009): S22-32</div>
+        <div class="myh">Bulk RNA-seq</div>
+        <object width="80%" type="image/svg+xml" data="plots/Bulk/rna_seq.svg"></object>
       </section>
+      <section>
+        <div class="myh">Count matrix</div>
+        <object width="80%" type="image/svg+xml" data="plots/Bulk/count_matrix.svg"></object>
+      </section>
+      <section>
+        <section>
+          <div class="myh">Problem 1. Alignment.</div>
+          <object width="80%" class="left" type="image/svg+xml" data="plots/Bulk/rna_seq.svg"></object>
+          <object width="80%" class="right" type="image/svg+xml" data="plots/Bulk/exones.svg"></object>
+        </section>
+        <section>
+          <div class="myh">Problem 2. Quantification.</div>
+          <object width="80%" class="left" type="image/svg+xml" data="plots/Bulk/rna_seq.svg"></object>
+          <object width="80%" class="right" type="image/svg+xml" data="plots/Bulk/amplification.svg"></object>
+        </section>
+      </section>
+
+      <!-- Old -->
       <section>
         <div class="myh">Возможности</div>
         <div class="left3">
