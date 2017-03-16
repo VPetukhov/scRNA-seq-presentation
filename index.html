@@ -2,54 +2,121 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-  <title>scRNA-seq review</title>
+  <title>RNA-seq intro</title>
 
-  <meta name="description" content="scRNA-seq review">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="RNA-seq intro">
   <meta name="author" content="Viktor Petukhov">
 
-  <link rel="stylesheet" href="css/user.css">
   <link rel="stylesheet" href="css/reveal.css">
   <link rel="stylesheet" href="css/theme/sky.css" id="theme">
-  <link rel="stylesheet" href="presentable-master/src/presentable.css">
+  <link rel="stylesheet" href="css/user_classes.css">
+  <link rel="stylesheet" href="css/custom.css">
 
   <!-- Theme used for syntax highlighting of code -->
   <link rel="stylesheet" href="lib/css/zenburn.css">
-  <link rel="stylesheet" href="css/user.css">
 
   <!-- Printing and PDF exports -->
   <script>
-  var link = document.createElement( 'link' );
-  link.rel = 'stylesheet';
-  link.type = 'text/css';
-  link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-  document.getElementsByTagName( 'head' )[0].appendChild( link );
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
   </script>
 </head>
 <body>
+  <div class="background">
+  </div>
   <div class="reveal">
     <div class="slides">
       <section data-background-image='plots/molecules2.jpg'>
         <!-- <h2 style="color:#FFFFFF;text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;">Single-cell RNA-sequencing</h2> -->
-        <h2><div class="OutlineText">RNA-sequencing</div></h2>
+        <h1><div class="OutlineText">RNA-sequencing</div></h1>
         <p align="right" class="OutlineText">Viktor Petukhov</p>
       </section>
       <section>
-        <object width="100%" type="image/svg+xml" data="plots/questions1.jpg"></object>
+        <img width="100%" src="plots/questions1.jpg">
       </section>
+      <!-- <section>
+          <section class="introduction-slide">
+              <h2>The idea</h2>
+
+              <div class="animated-html" style="overflow: hidden;">
+                  <animation duration="1000">
+                      <animate data-id="introduction-bubble" data-property="opacity" data-value="1"></animate>
+                      <animate data-id="introduction-bubble" data-property="left" data-value="400"></animate>
+                  </animation>
+
+                  <img src="img/thinker.png" style="position: absolute; left: 200px; top: 280px; border: 0;"/>
+                  <img id="introduction-bubble" src="img/idea.png" style="position: absolute; left: 1000px; top: 150px; border: 0; opacity: 0;"/>
+              </div>
+          </section> -->
+<!--
+          <section>
+              <h2>Animating HTML</h2>
+
+              <div class="animated-html" style="overflow: hidden; position: relative; width: 900px; height: 600px;">
+                  <animation duration="500">
+                      <animate data-id="slide1-1" data-property="left" data-value="150px"></animate>
+                  </animation>
+                  <animation duration="500">
+                      <animate data-id="slide1-2" data-property="left" data-value="200px"></animate>
+                  </animation>
+                  <animation duration="500">
+                      <animate data-id="slide1-1" data-property="opacity" data-value="0"></animate>
+                      <animate data-id="slide1-2" data-property="opacity" data-value="0"></animate>
+                      <animate data-id="slide1-3" data-property="left" data-value="180px"></animate>
+                      <animate data-id="slide1-3" data-property="top" data-value="220px"></animate>
+                  </animation>
+
+                  <div id="slide1-1" class="tiny-font" style="position: absolute; left: 1500px; top: 150px; width: 700px;">
+                      With reveal animate, you can animate arbitrary HTML content.
+                  </div>
+                  <div id="slide1-2" class="tiny-font" style="position: absolute; left: 1500px; top: 350px; width: 700px;">
+                      Switching to the next slide will animate the next element.
+                  </div>
+                  <div id="slide1-3" style="position: absolute; left: 1600px; top: 0; width: 600px; -webkit-transform: rotate(15deg);">
+                      You can also modify multiple elements in one step.
+                  </div>
+              </div>
+          </section> -->
+
+          <!-- <section>
+              <h2>Animating SVG</h2>
+
+              <div class="svg animated-svg" src="img/slide2.svg" style="text-align: left; width: 800px; height: 600px;">
+                  <animation duration="500">
+                      <animate data-id="slide2-1" data-property="opacity" data-value="1"></animate>
+                  </animation>
+                  <animation duration="500">
+                      <animate data-id="slide2-2" data-property="opacity" data-value="1"></animate>
+                      <animate data-id="slide2-3" data-property="opacity" data-value="1"></animate>
+                      <animate data-id="slide2-2" data-property="transform" data-value="translate(150, 0)"></animate>
+                  </animation>
+                  <animation duration="500">
+                      <animate data-id="slide2-3" data-property="transform" data-value="scale(2.0, 2.0)"></animate>
+                  </animation>
+              </div>
+          </section>
+      </section> -->
       <section>
-        <h3>План</h3>
-        <ul>
-          <li class="left"><strike>Методы</strike></li>
-          <!-- <object width="20%" type="image/svg+xml" data="plots/Intro/tools1.png" class="float_right"></object> -->
-          <li class="left">Биология</li>
-          <!-- <object width="20%" type="image/svg+xml" data="plots/Intro/biology.png" class="float_right"></object> -->
-          <li class="left">Приложения</li>
-          <!-- <object width="20%" type="image/svg+xml" data="plots/Intro/applications.png" class="float_right"></object> -->
-          <li class="left">Задачи</li>
-          <!-- <object width="20%" type="image/svg+xml" data="plots/Intro/tasks.png" class="float_right"></object> -->
-        </ul>
+        <div class="h_slide">План</div>
+        <!-- <animation duration="500">
+            <animate data-id="no_methods_sign" data-property="opacity" data-value="1"></animate>
+            <animate data-id="no_methods_sign" data-property="opacity" data-value="1"></animate>
+            <animate data-id="no_methods_sign" data-property="transform" data-value="translate(150, 0)"></animate>
+        </animation> -->
+        <div class="animated-html">
+            <animation duration="1000">
+                <animate data-id="no_methods_sign" data-property="height" data-value="10"></animate>
+                <animate data-id="no_methods_sign" data-property="left" data-value="400"></animate>
+            </animation>
+
+            <!-- <img id="introduction-bubble" src="img/idea.png" style="position: absolute; left: 1000px; top: 150px; border: 0; opacity: 0;"/> -->
+            <img id="no_methods_sign" class="scheme" src="plots/Intro/NoMethods.png" style="position: absolute; left: 20%; right: 100%;">
+        </div>
       </section>
       <section>
         Экспрессия генов<br />
@@ -67,105 +134,112 @@
       </section>
       <!-- Biology -->
       <section>
-        <div class="myh">Постановка задачи</div>
-        <div class="left">
-          <object height="310px" type="image/svg+xml" data="plots/Biology/group_of_mice.jpg"></object>
+        <div class="h_slide">Постановка задачи</div>
+        <div class="left_abs">
+          <img height="400px" src="plots/Biology/group_of_mice.jpg">
         </div>
-        <div class="right">
-          <object height="310px" type="image/svg+xml" data="plots/Biology/drunk_mouse.jpg"></object>
+        <div class="right" >
+          <img height="400px" src="plots/Biology/drunk_mouse.jpg">
         </div>
       </section>
       <section data-transition="none">
         <section data-transition="none">
-          <div class="myh">Cell processes</div>
-          <object width="80%" type="image/svg+xml" data="plots/Biology/simple_dogma.svg"></object>
+          <div class="h_slide">Cell processes</div>
+          <img class="scheme" width="80%" src="plots/Biology/simple_dogma.svg">
         </section>
         <section data-transition="none">
-          <div class="myh">Cell processes</div>
-          <object width="80%" type="image/svg+xml" data="plots/Biology/regulation.svg"></object>
+          <div class="h_slide">Cell processes</div>
+          <img class="scheme" width="80%" src="plots/Biology/regulation.svg">
         </section>
         <section data-transition="none">
-          <div class="myh">Cell processes</div>
-          <object width="80%" type="image/svg+xml" data="plots/Biology/epigenetic.svg"></object>
+          <div class="h_slide">Cell processes</div>
+          <img class="scheme" width="80%" src="plots/Biology/epigenetic.svg">
         </section>
         <section data-transition="none">
-          <div class="myh">Cell processes</div>
-          <object width="80%" type="image/svg+xml" data="plots/Biology/full_scheme.svg"></object>
+          <div class="h_slide">Cell processes</div>
+          <img class="scheme" width="80%" src="plots/Biology/full_scheme.svg">
         </section>
       </section>
 
       <!-- Bulk RNA-seq -->
       <section data-transition="none">
         <section data-transition="none">
-          <div class="myh">Cell processes</div>
-          <object width="80%" type="image/svg+xml" data="plots/Biology/simple_dogma.svg"></object>
+          <div class="h_slide">Cell processes</div>
+          <img class="scheme" width="100%" src="plots/Bulk/simple_dogma.svg">
         </section>
         <section data-transition="none">
-          <div class="myh">Cell processes</div>
-          <object width="80%" type="image/svg+xml" data="plots/Bulk/full_dogma.svg"></object>
+          <div class="h_slide">Cell processes</div>
+          <img class="scheme" width="100%" src="plots/Bulk/full_dogma.svg">
         </section>
       </section>
       <section>
-        <div class="myh">Bulk RNA-seq</div>
-        <object width="80%" type="image/svg+xml" data="plots/Bulk/rna_seq.svg"></object>
+        <div class="h_slide">Bulk RNA-seq</div>
+        <img width="80%" src="plots/Bulk/rna_seq.svg">
       </section>
       <section>
-        <div class="myh">Count matrix</div>
-        <object width="80%" type="image/svg+xml" data="plots/Bulk/count_matrix.svg"></object>
+        <div class="h_slide">Count matrix</div>
+        <img width="80%" src="plots/Bulk/count_matrix.svg">
       </section>
       <section>
         <section>
-          <div class="myh">Problem 1. Alignment.</div>
-          <object width="80%" class="left" type="image/svg+xml" data="plots/Bulk/rna_seq.svg"></object>
-          <object width="80%" class="right" type="image/svg+xml" data="plots/Bulk/exones.svg"></object>
+          <div class="h_slide">Problem 1. Alignment.</div>
+          <div class="left_abs">
+            <img width="650px" src="plots/Bulk/rna_seq.svg">
+          </div>
+          <div class="right">
+            <img width="650px" src="plots/Bulk/exones.svg">
+          </div>
         </section>
         <section>
-          <div class="myh">Problem 2. Quantification.</div>
-          <object width="80%" class="left" type="image/svg+xml" data="plots/Bulk/rna_seq.svg"></object>
-          <object width="80%" class="right" type="image/svg+xml" data="plots/Bulk/amplification.svg"></object>
+          <div class="h_slide">Problem 2. Quantification.</div>
+          <div class="left_abs">
+            <img width="650px" src="plots/Bulk/rna_seq.svg">
+          </div>
+          <div class="right">
+            <img width="650px" src="plots/Bulk/amplification.svg">
+          </div>
         </section>
       </section>
 
       <!-- Applications -->
       <section>
-        <div class="myh">Application 1. Differential expression.</div>
+        <div class="h_slide">Application 1. Differential expression.</div>
         <div class="left">
-          <object width="90%" type="image/svg+xml" data="plots/Biology/group_of_mice.jpg"></object><br/>
-          <object width="90%" type="image/svg+xml" data="plots/Biology/drunk_mouse.jpg"></object>
+          <img width="90%" src="plots/Biology/group_of_mice.jpg"><br/>
+          <img width="90%" src="plots/Biology/drunk_mouse.jpg">
         </div>
         <div class="right">
-          <object width="75%" type="image/svg+xml" data="plots/Applications/diff_expression.png" ></object>
+          <img height="520" src="plots/Applications/diff_expression.png">
           <div class="citation">Medina et al. 2010. Babelomics: an integrative platform for the analysis of transcriptomics, proteomics and genomic data with advanced functional profiling. Nucleic Acids Research (Web Server issue).</div>
         </div>
       </section>
       <section>
         <section>
-          <div class="myh">Application 2. Genes co-expression analysis.</div>
-          <div class="left">
-            <object height="400px" type="image/svg+xml" data="plots/Applications/tissues.jpg"></object><br/>
+          <div class="h_slide">Application 2. Genes co-expression analysis.</div>
+          <div class="float_left">
+            <img height="500" src="plots/Applications/tissues.jpg">
           </div>
-          <div class="right">
-            <!-- <object width="120%" type="image/svg+xml" data="plots/Applications/network_correlations.png" ></object> -->
-            <object height="400px" type="image/svg+xml" data="plots/Applications/gene_network.jpg" ></object>
+          <div class="float_right">
+            <img height="420" src="plots/Applications/gene_network.jpg">
           </div>
         </section>
         <section>
-          <div class="myh">Application 2. Genes co-expression analysis.</div>
-          <object width="100%" type="image/svg+xml" data="plots/Applications/gene_network.jpg" ></object>
+          <div class="h_slide">Application 2. Genes co-expression analysis.</div>
+          <img height="500px" src="plots/Applications/gene_network.jpg">
         </section>
       </section>
       <section>
         <div class="left">
-          <div class="myh">Differential expression</div>
-          <object height="190px" type="image/svg+xml" data="plots/Applications/count_matrix_mice.svg"></object><br/>
+          <div class="h_slide">Differential expression</div>
+          <img height="185" src="plots/Applications/count_matrix_mice.svg"><br/>
         </div>
         <div class="right">
-          <div class="myh">Genes co-expression analysis</div>
-          <object height="190px" type="image/svg+xml" data="plots/Applications/count_matrix_tissues.svg" ></object>
+          <div class="h_slide">Genes co-expression analysis</div>
+          <img height="185" src="plots/Applications/count_matrix_tissues.svg">
         </div>
       </section>
       <section>
-        <div class="myh">Проблема bulk RNA-seq</div>
+        <div class="h_slide">Проблема bulk RNA-seq</div>
         <div align="left">
           РНК собирается со всех тканей:
         </div>
@@ -178,95 +252,88 @@
       <!-- scRNA-seq -->
 
       <section data-background-color="#000000">
-          <div class="myh" style="color:white;">scRNA-seq</div>
-          <object width="50%" type="image/svg+xml" data="plots/Science2013.jpg" ></object>
+          <div class="h_slide" style="color:white;">scRNA-seq</div>
+          <img width="50%" src="plots/Science2013.jpg">
       </section>
       <section>
         <div class="left">
-          <div class="myh">No more tissues!</div>
-          <object width="111%" type="image/svg+xml" data="plots/scRNA-seq/count_matrix_tissues.svg"></object><br/>
+          <div class="h_slide">No more tissues!</div>
+          <img height="185" src="plots/scRNA-seq/count_matrix_tissues.svg"><br/>
         </div>
         <div class="right">
-          <div class="myh">Only cells!</div>
-          <object width="100%" type="image/svg+xml" data="plots/scRNA-seq/count_matrix_cells.svg"></object>
+          <div class="h_slide">Only cells!</div>
+          <img height="185" src="plots/scRNA-seq/count_matrix_cells.svg">
         </div>
       </section>
       <section>
-        <section data-transition="none">
-          <div class="myh">Новые возможности</div>
-          Гетерогенные популяции<br>
-          <div class="left">
-            <object width="100%" type="image/svg+xml" data="plots/scRNA-seq/HeteroCells.svg"></object>
+        <div class="h_slide">Новые возможности</div>
+        <section data-transition="slide-in">
+          <h4>Гетерогенные популяции</h4>
+          <div class="left fragment" data-fragment-index="0">
+            <div style="position:relative; height:500px; margin:0 auto;">
+              <img class="fragment fade-out" data-fragment-index="1" width="100%" src="plots/scRNA-seq/HeteroCells.svg" style="position:absolute;top:0;left:0;">
+              <img class="fragment fade-in" data-fragment-index="1" width="100%" src="plots/scRNA-seq/HeteroCells2.svg" style="position:absolute;top:0;left:0;">
+            </div>
             <div class="citation">*Itay Tirosh et al., Dissecting the multicellular ecosystem of metastatic melanoma by single-cell RNA-seq. Science 352, 189 (2016)</div>
           </div>
-        </section>
-        <section data-transition="none">
-          <div class="myh">Новые возможности</div>
-          Гетерогенные популяции<br>
-          <div class="left">
-            <object width="100%" type="image/svg+xml" data="plots/scRNA-seq/HeteroCells2.svg"></object>
-            <div class="citation">*Itay Tirosh et al., Dissecting the multicellular ecosystem of metastatic melanoma by single-cell RNA-seq. Science 352, 189 (2016)</div>
-          </div>
-          <div class="right fragment">
-            <object width="100%" type="image/svg+xml" data="plots/scRNA-seq/drug_cancer.svg"></object>
+          <div class="right fragment" data-fragment-index="2">
+            <img width="100%" src="plots/scRNA-seq/drug_cancer.svg">
           </div>
         </section>
-        <section>
-          <div class="myh">Новые возможности</div>
-          Поиск малых субпопуляций<br>
-          <object width="70%" type="image/svg+xml" data="plots/metastasis.png" ></object>
+        <section data-transition="slide-in">
+          <h4>Поиск малых субпопуляций</h4>
+          <img width="70%" src="plots/metastasis.png">
           <div class="citation">*Malladi et al., 2016, Cell 165, 45–60 March 24, 2016</div>
         </section>
-        <section>
-          <div class="myh">Новые возможности</div>
+        <section data-transition="slide-in">
           Neuroscience<br>
-          <object width="60%" type="image/svg+xml" data="plots/scRNA-seq/Brain.jpg"></object>
+          <img width="60%" src="plots/scRNA-seq/Brain.jpg">
         </section>
       </section>
       <section>
-        <div class="myh">Задачи</div>
-        <div class="left3">
-          Нормализация<br><br>
-          <object  width="100%" type="image/svg+xml" data="plots/Bulk/rna_seq.svg" ></object>
+        <div class="h_slide">Задачи</div>
+        <div class="left3 fragment">
+          <h4>Нормализация</h4>
+          <img width="100%" src="plots/Bulk/rna_seq.svg">
         </div>
         <div class="center3 fragment">
-          Дифф. экспрессия<br>
-          <object type="image/svg+xml" width="100%" data="plots/Applications/diff_expression.png" ></object>
+          <h4>Дифф. экспрессия</h4>
+          <img width="100%" src="plots/Applications/diff_expression.png">
           <div class="citation">Medina et al. 2010. Babelomics: an integrative platform for the analysis of transcriptomics, proteomics and genomic data with advanced functional profiling. Nucleic Acids Research (Web Server issue).</div>
         </div>
         <div class="right3 fragment">
-          Взаимодействие генов<br>
-          <object width="100%" type="image/svg+xml" data="plots/genes_regulation.svg" ></object>
+          <h4>Взаимодействие генов</h4>
+          <img width="100%" src="plots/genes_regulation.svg">
         </div>
       </section>
       <section>
         <section data-background-color="#000000">
-          <div class="myh">
+          <div class="h_slide">
             <font color="white">
               Задачи<br/>
               Визуализация<br/>
             </font>
           </div>
-          <object width="100%" type="image/svg+xml" data="plots/matrix_neo.svg" ></object>
+          <img width="100%" src="plots/matrix_neo.svg">
         </section>
         <section>
-          <div class="myh">
+          <div class="h_slide">
             Задачи<br/>
             Визуализация<br/>
           </div>
-          <div class="left"><object height="430px" type="image/svg+xml" data="plots/scRNA-seq/visualization1.svg" ></object></div>
-          <div class="right"><object height="430px" type="image/svg+xml" data="plots/scRNA-seq/visualization3.svg" ></object></div>
+          <div class="left"><img height="430px" src="plots/scRNA-seq/visualization1.svg"></div>
+          <div class="right"><img height="430px" src="plots/scRNA-seq/visualization3.svg"></div>
         </section>
       </section>
       <section>
         <section>
-          <div class="myh">Развитие</div>
-          <object width="80%" type="image/svg+xml" data="plots/LibrarySizes.svg" ></object>
+          <div class="h_slide">Развитие</div>
+          <img width="80%" src="plots/LibrarySizes.svg">
           <div class="citation">*Kumar P, et al., Understanding development and stem cells using single cell-based analyses of gene expression, Development (2017) 144, 17-32</div>
         </section>
         <section>
-          <div class="myh">Развитие 2017</div>
-          <object width="50%" type="image/svg+xml" data="plots/10X.jpg" ></object><br>
+          <div class="h_slide">Развитие 2017</div>
+          <img width="50%" src="plots/10X.jpg"><br>
           <big>1.3 миллиона клеток (mouse brain)</big>
           <div class="citation">*https://support.10xgenomics.com/single-cell/datasets/1M_neurons</div>
         </section>
@@ -275,15 +342,15 @@
       <!-- Pseudotemporal ordering -->
       <section>
         <section>
-          <div class="myh">Pseudotemporal ordering</div>
+          <div class="h_slide">Pseudotemporal ordering</div>
         </section>
         <section data-transition="none">
-          <div class="myh">Pseudotemporal ordering</div>
-          <object height="600px" type="image/svg+xml" data="plots/PseudoTime/clusters.svg" ></object>
+          <div class="h_slide">Pseudotemporal ordering</div>
+          <img height="600px" src="plots/PseudoTime/clusters.svg">
         </section>
         <section data-transition="none">
-          <div class="myh">Pseudotemporal ordering</div>
-          <object height="600px" type="image/svg+xml" data="plots/PseudoTime/paths.svg" ></object>
+          <div class="h_slide">Pseudotemporal ordering</div>
+          <img height="600px" src="plots/PseudoTime/paths.svg">
         </section>
       </section>
       <section data-background-color="#000000"></section>
@@ -293,11 +360,21 @@
   <script src="lib/js/head.min.js"></script>
   <script src="js/reveal.js"></script>
 
+  <script src="js/jquery.1.10.2.js"></script>
+  <script src="js/jquery.browser.js"></script>
+  <script src="js/jquery.svg.js"></script>
+  <script src="js/jquery.svganim.js"></script>
+  <script src="js/sylvester.js"></script>
   <script>
     // More info https://github.com/hakimel/reveal.js#configuration
     Reveal.initialize({
+      margin: 0,
       history: true,
-      // transition: 'none',
+      center: true,
+
+      theme: 'sky', // available themes are in /css/theme
+
+      // transition: 'cube',
       transitionSpeed: 'fast',
       slideNumber: "c.v/t",
 
@@ -307,7 +384,22 @@
         { src: 'plugin/markdown/markdown.js' },
         { src: 'plugin/notes/notes.js', async: true },
         { src: 'plugin/math/math.js', async: true },
-        { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+        { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+        { src: 'plugin/animate/reveal.quickanim.js', async: false, callback: function() {
+          var quickAnimationsTransformer = Reveal.QuickAnimationTransformer({
+            animationClass: 'animated-html',
+            duration: 500
+          });
+          quickAnimationsTransformer.transform();
+        } },
+        { src: 'plugin/animate/reveal.animate.js', async: true, callback: function() {
+          Reveal.Animate({
+            animationProviders: {
+              'animated-svg': Reveal.Animate.Svg(),
+              'animated-html': Reveal.Animate.Html()
+            }
+          });
+        } }
       ]
     });
 

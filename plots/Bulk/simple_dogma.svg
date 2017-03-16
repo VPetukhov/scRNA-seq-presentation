@@ -15,7 +15,7 @@
    version="1.1"
    id="svg4583"
    inkscape:version="0.92.0 r"
-   sodipodi:docname="full_dogma.svg">
+   sodipodi:docname="simple_dogma.svg">
   <defs
      id="defs4577">
     <marker
@@ -291,9 +291,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.7"
-     inkscape:cx="25.64763"
-     inkscape:cy="53.752861"
+     inkscape:zoom="1.4"
+     inkscape:cx="100.69626"
+     inkscape:cy="-0.34331796"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -359,7 +359,7 @@
          style="font-size:12.69999981px;stroke-width:0.26458332px">PROTEINS</tspan></text>
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.80340308;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker1299)"
-       d="m 54.069091,236.0845 29.126426,0.10226"
+       d="m 54.069091,238.73035 29.126426,0.10226"
        id="path1295"
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0" />
@@ -384,50 +384,12 @@
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:5.64444447px;line-height:52.91666794px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="55.41732"
-       y="232.8568"
+       y="235.50259"
        id="text2357-6-3"><tspan
          sodipodi:role="line"
          x="55.41732"
-         y="232.8568"
+         y="235.50259"
          style="font-size:4.23333454px;writing-mode:lr-tb;stroke-width:0.26458332px"
          id="tspan4669">Transcription</tspan></text>
-    <path
-       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.80299997;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Arrow1Mstart)"
-       d="m 53.99157,240.60869 29.126426,0.10226"
-       id="path1295-7"
-       inkscape:connector-type="polyline"
-       inkscape:connector-curvature="0" />
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:5.64444447px;line-height:10.00000015%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="68.802742"
-       y="246.32213"
-       id="text2357-6-3-5"><tspan
-         sodipodi:role="line"
-         x="68.802742"
-         y="246.32213"
-         style="font-size:4.23333454px;line-height:100%;text-align:center;writing-mode:lr-tb;text-anchor:middle;stroke-width:0.26458332px"
-         id="tspan4669-3">Reverse</tspan><tspan
-         sodipodi:role="line"
-         x="68.802742"
-         y="250.55547"
-         style="font-size:4.23333454px;line-height:100%;text-align:center;writing-mode:lr-tb;text-anchor:middle;stroke-width:0.26458332px"
-         id="tspan5228">Transcription</tspan></text>
-    <path
-       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.80000001;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker14187)"
-       d="M 37.570833,231.64791 C 102.77173,184.40089 170.42947,231.8369 170.42947,231.8369"
-       id="path5230"
-       inkscape:connector-curvature="0" />
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:5.64444447px;line-height:52.91666794px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="84.576004"
-       y="208.50684"
-       id="text2357-6-5"><tspan
-         sodipodi:role="line"
-         id="tspan2355-2-6"
-         x="84.576004"
-         y="208.50684"
-         style="font-size:4.23333454px;writing-mode:lr-tb;stroke-width:0.26458332px">Direct translation</tspan></text>
   </g>
 </svg>
