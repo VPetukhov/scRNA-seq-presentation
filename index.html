@@ -45,16 +45,16 @@
                 <animate data-id="no_methods_sign" data-property="left" data-value="-200"></animate>
                 <animate data-id="Plan-1" data-property="opacity" data-value="1"></animate>
             </animation>
-            <animation duration="10">
+            <animation duration="1">
                 <animate data-id="Plan-2" data-property="opacity" data-value="1"></animate>
             </animation>
-            <animation duration="10">
+            <animation duration="1">
                 <animate data-id="Plan-3" data-property="opacity" data-value="1"></animate>
             </animation>
-            <animation duration="10">
+            <animation duration="1">
                 <animate data-id="Plan-4" data-property="opacity" data-value="1"></animate>
             </animation>
-            <animation duration="10">
+            <animation duration="1">
                 <animate data-id="Plan-5" data-property="opacity" data-value="1"></animate>
             </animation>
 
@@ -98,9 +98,9 @@
       </section>
       <section>
         <div class="h_slide">Определения</div>
-        <ul style="font-size: 70%;">
+        <ul style="font-size: 80%;">
             <li><b>Экспрессия генов</b> - процесс преобразования наследственной информации гена в функциональный продукт (РНК или белок)</li>
-            <li><b>Коэкспрессия (взаимная регуляция)</b> - процесс, описывающий ситуацию, когда экспрессия одного гена влияет на экспрессю другого (повышая или понижая её)</li>
+            <li><b>Коэкспрессия (взаимная регуляция)</b> - процесс, описывающий ситуацию, когда экспрессия одного гена влияет на экспрессию другого (повышая или понижая её)</li>
             <li><b>Транскрипция</b> - построение РНК по ДНК (РНК -> ДНК)</li>
             <li><b>Трансляция</b> - процесс синтеза белка (РНК -> белок)</li>
             <li><b>Экзоны</b> - участки ДНК, копии которых составляют зрелую РНК</li>
@@ -112,10 +112,10 @@
       <!-- Bulk RNA-seq -->
       <section>
         <div class="h_slide">Постановка задачи</div>
-        <div class="left_abs">
+        <div class="left">
           <img height="400px" src="plots/Biology/group_of_mice.jpg">
         </div>
-        <div class="right" >
+        <div class="right">
           <img height="400px" src="plots/Biology/drunk_mouse.jpg">
         </div>
       </section>
@@ -165,8 +165,8 @@
       <section>
         <div class="h_slide">Application 1. Differential expression.</div>
         <div class="left">
-          <img width="90%" src="plots/Biology/group_of_mice.jpg"><br/>
-          <img width="90%" src="plots/Biology/drunk_mouse.jpg">
+          <img width="80%" src="plots/Biology/group_of_mice.jpg"><br/>
+          <img width="80%" src="plots/Biology/drunk_mouse.jpg">
         </div>
         <div class="right">
           <img height="520" src="plots/Applications/diff_expression.png">
@@ -190,7 +190,7 @@
       </section>
       <section>
         <div class="left">
-          <div class="h_slide">Differential expression</div>
+          <div class="h_slide">Differential<br />expression</div>
           <img height="185" src="plots/Applications/count_matrix_mice.svg"><br/>
         </div>
         <div class="right">
@@ -301,16 +301,14 @@
 
       <!-- Pseudotemporal ordering -->
       <section>
+        <div class="h_slide">Pseudotemporal ordering</div>
         <section>
-          <div class="h_slide">Pseudotemporal ordering</div>
         </section>
         <section data-transition="none">
-          <div class="h_slide">Pseudotemporal ordering</div>
-          <img height="600px" src="plots/PseudoTime/clusters.svg">
+          <img height="550px" src="plots/PseudoTime/clusters.svg">
         </section>
         <section data-transition="none">
-          <div class="h_slide">Pseudotemporal ordering</div>
-          <img height="600px" src="plots/PseudoTime/paths.svg">
+          <img height="550px" src="plots/PseudoTime/paths.svg">
         </section>
       </section>
       <section data-background-color="#000000"></section>
@@ -348,7 +346,7 @@
         { src: 'plugin/animate/reveal.quickanim.js', async: false, callback: function() {
           var quickAnimationsTransformer = Reveal.QuickAnimationTransformer({
             animationClass: 'animated-html',
-            duration: 500
+            duration: 100
           });
           quickAnimationsTransformer.transform();
         } },
