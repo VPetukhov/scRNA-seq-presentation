@@ -85,15 +85,13 @@ html.intro body {
     background: none;
 }
 
-.reveal>.slides .scheme {
-    border-style: none;
+.reveal>.slides li {
+    margin: 10px;
 }
 
 .reveal section img {
-  margin: 5px 0px;
-  /*box-shadow: none;*/
+  margin: 10px 0px;
   border-style: none;
   border: 2px solid black;
   border-style: outset;
-  box-shadow: none;
 }

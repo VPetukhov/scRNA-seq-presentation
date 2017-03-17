@@ -32,107 +32,84 @@
   <div class="reveal">
     <div class="slides">
       <section data-background-image='plots/molecules2.jpg'>
-        <!-- <h2 style="color:#FFFFFF;text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;">Single-cell RNA-sequencing</h2> -->
         <h1><div class="OutlineText">RNA-sequencing</div></h1>
         <p align="right" class="OutlineText">Viktor Petukhov</p>
       </section>
       <section>
         <img width="100%" src="plots/questions1.jpg">
       </section>
-      <!-- <section>
-          <section class="introduction-slide">
-              <h2>The idea</h2>
-
-              <div class="animated-html" style="overflow: hidden;">
-                  <animation duration="1000">
-                      <animate data-id="introduction-bubble" data-property="opacity" data-value="1"></animate>
-                      <animate data-id="introduction-bubble" data-property="left" data-value="400"></animate>
-                  </animation>
-
-                  <img src="img/thinker.png" style="position: absolute; left: 200px; top: 280px; border: 0;"/>
-                  <img id="introduction-bubble" src="img/idea.png" style="position: absolute; left: 1000px; top: 150px; border: 0; opacity: 0;"/>
-              </div>
-          </section> -->
-<!--
-          <section>
-              <h2>Animating HTML</h2>
-
-              <div class="animated-html" style="overflow: hidden; position: relative; width: 900px; height: 600px;">
-                  <animation duration="500">
-                      <animate data-id="slide1-1" data-property="left" data-value="150px"></animate>
-                  </animation>
-                  <animation duration="500">
-                      <animate data-id="slide1-2" data-property="left" data-value="200px"></animate>
-                  </animation>
-                  <animation duration="500">
-                      <animate data-id="slide1-1" data-property="opacity" data-value="0"></animate>
-                      <animate data-id="slide1-2" data-property="opacity" data-value="0"></animate>
-                      <animate data-id="slide1-3" data-property="left" data-value="180px"></animate>
-                      <animate data-id="slide1-3" data-property="top" data-value="220px"></animate>
-                  </animation>
-
-                  <div id="slide1-1" class="tiny-font" style="position: absolute; left: 1500px; top: 150px; width: 700px;">
-                      With reveal animate, you can animate arbitrary HTML content.
-                  </div>
-                  <div id="slide1-2" class="tiny-font" style="position: absolute; left: 1500px; top: 350px; width: 700px;">
-                      Switching to the next slide will animate the next element.
-                  </div>
-                  <div id="slide1-3" style="position: absolute; left: 1600px; top: 0; width: 600px; -webkit-transform: rotate(15deg);">
-                      You can also modify multiple elements in one step.
-                  </div>
-              </div>
-          </section> -->
-
-          <!-- <section>
-              <h2>Animating SVG</h2>
-
-              <div class="svg animated-svg" src="img/slide2.svg" style="text-align: left; width: 800px; height: 600px;">
-                  <animation duration="500">
-                      <animate data-id="slide2-1" data-property="opacity" data-value="1"></animate>
-                  </animation>
-                  <animation duration="500">
-                      <animate data-id="slide2-2" data-property="opacity" data-value="1"></animate>
-                      <animate data-id="slide2-3" data-property="opacity" data-value="1"></animate>
-                      <animate data-id="slide2-2" data-property="transform" data-value="translate(150, 0)"></animate>
-                  </animation>
-                  <animation duration="500">
-                      <animate data-id="slide2-3" data-property="transform" data-value="scale(2.0, 2.0)"></animate>
-                  </animation>
-              </div>
-          </section>
-      </section> -->
       <section>
         <div class="h_slide">План</div>
-        <!-- <animation duration="500">
-            <animate data-id="no_methods_sign" data-property="opacity" data-value="1"></animate>
-            <animate data-id="no_methods_sign" data-property="opacity" data-value="1"></animate>
-            <animate data-id="no_methods_sign" data-property="transform" data-value="translate(150, 0)"></animate>
-        </animation> -->
         <div class="animated-html">
-            <animation duration="1000">
-                <animate data-id="no_methods_sign" data-property="height" data-value="10"></animate>
-                <animate data-id="no_methods_sign" data-property="left" data-value="400"></animate>
+            <animation duration="200">
+                <animate data-id="no_methods_sign" data-property="left" data-value="-200"></animate>
+                <animate data-id="Plan-1" data-property="opacity" data-value="1"></animate>
+            </animation>
+            <animation duration="10">
+                <animate data-id="Plan-2" data-property="opacity" data-value="1"></animate>
+            </animation>
+            <animation duration="10">
+                <animate data-id="Plan-3" data-property="opacity" data-value="1"></animate>
+            </animation>
+            <animation duration="10">
+                <animate data-id="Plan-4" data-property="opacity" data-value="1"></animate>
+            </animation>
+            <animation duration="10">
+                <animate data-id="Plan-5" data-property="opacity" data-value="1"></animate>
             </animation>
 
-            <!-- <img id="introduction-bubble" src="img/idea.png" style="position: absolute; left: 1000px; top: 150px; border: 0; opacity: 0;"/> -->
-            <img id="no_methods_sign" class="scheme" src="plots/Intro/NoMethods.png" style="position: absolute; left: 20%; right: 100%;">
+            <div id="no_methods_sign" style="position: absolute; left: 235px; width:530px">
+                <img width="100%" src="plots/Intro/NoMethods.png" style="float: left; left: 300px;">
+            </div>
+            <div class="right">
+                <ul>
+                    <li id="Plan-1" style="opacity: 0">Немного биологии</li>
+                    <li id="Plan-2" style="opacity: 0">Bulk RNA-seq</li>
+                    <li id="Plan-3" style="opacity: 0">Bulk RNA-seq applications</li>
+                    <li id="Plan-4" style="opacity: 0">Single cell RNA-seq</li>
+                    <li id="Plan-5" style="opacity: 0">Pseudotemporal ordering</li>
+                </ul>
+            </div>
         </div>
       </section>
-      <section>
-        Экспрессия генов<br />
-        Коэкспрессия. Регуляция<br />
-        Транскрипция<br />
-        Трансляция<br />
-        Экзон<br />
-        Интрон<br />
-      </section>
-      <section>
-        Дифференцировка. Стволовые клетки.
-      </section>
-      <section>
-        Повторить определения. Вопросы.
-      </section>
+
       <!-- Biology -->
+      <section data-transition="none">
+        <div class="h_slide">Gene expression</div>
+        <section data-transition="none">
+          <img class="scheme" width="80%" src="plots/Biology/simple_dogma.svg">
+        </section>
+        <section data-transition="none">
+          <img class="scheme" width="80%" src="plots/Biology/regulation.svg">
+        </section>
+        <section data-transition="none">
+          <img class="scheme" width="80%" src="plots/Biology/autoregulation.svg">
+        </section>
+        <section data-transition="none">
+          <img class="scheme" width="80%" src="plots/Biology/epigenetic.svg">
+        </section>
+        <section data-transition="none">
+          <img class="scheme" width="80%" src="plots/Biology/full_scheme.svg">
+        </section>
+      </section>
+      <section>
+        <div class="h_slide">Cells differentiation</div>
+        <img width="75%" src="plots/Biology/differentiation.svg">
+      </section>
+      <section>
+        <div class="h_slide">Определения</div>
+        <ul style="font-size: 70%;">
+            <li><b>Экспрессия генов</b> - процесс преобразования наследственной информации гена в функциональный продукт (РНК или белок)</li>
+            <li><b>Коэкспрессия (взаимная регуляция)</b> - процесс, описывающий ситуацию, когда экспрессия одного гена влияет на экспрессю другого (повышая или понижая её)</li>
+            <li><b>Транскрипция</b> - построение РНК по ДНК (РНК -> ДНК)</li>
+            <li><b>Трансляция</b> - процесс синтеза белка (РНК -> белок)</li>
+            <li><b>Экзоны</b> - участки ДНК, копии которых составляют зрелую РНК</li>
+            <li><b>Интроны</b> - участки генов, которые вырезаются из pre-mRNA в процессе <b>сплайсинга</b></li>
+            <li><b>Дифференцировка</b> - процесс "специализации" клетки</li>
+        </ul>
+      </section>
+
+      <!-- Bulk RNA-seq -->
       <section>
         <div class="h_slide">Постановка задачи</div>
         <div class="left_abs">
@@ -142,33 +119,16 @@
           <img height="400px" src="plots/Biology/drunk_mouse.jpg">
         </div>
       </section>
-      <section data-transition="none">
-        <section data-transition="none">
-          <div class="h_slide">Cell processes</div>
-          <img class="scheme" width="80%" src="plots/Biology/simple_dogma.svg">
-        </section>
-        <section data-transition="none">
-          <div class="h_slide">Cell processes</div>
-          <img class="scheme" width="80%" src="plots/Biology/regulation.svg">
-        </section>
-        <section data-transition="none">
-          <div class="h_slide">Cell processes</div>
-          <img class="scheme" width="80%" src="plots/Biology/epigenetic.svg">
-        </section>
-        <section data-transition="none">
-          <div class="h_slide">Cell processes</div>
-          <img class="scheme" width="80%" src="plots/Biology/full_scheme.svg">
-        </section>
+      <section>
+        <div class="h_slide">Gene expression</div>
+        <img class="scheme" width="80%" src="plots/Biology/full_scheme.svg">
       </section>
-
-      <!-- Bulk RNA-seq -->
       <section data-transition="none">
+        <div class="h_slide">Central dogma of molecular biology</div>
         <section data-transition="none">
-          <div class="h_slide">Cell processes</div>
           <img class="scheme" width="100%" src="plots/Bulk/simple_dogma.svg">
         </section>
         <section data-transition="none">
-          <div class="h_slide">Cell processes</div>
           <img class="scheme" width="100%" src="plots/Bulk/full_dogma.svg">
         </section>
       </section>
@@ -251,9 +211,9 @@
 
       <!-- scRNA-seq -->
 
-      <section data-background-color="#000000">
-          <div class="h_slide" style="color:white;">scRNA-seq</div>
-          <img width="50%" src="plots/Science2013.jpg">
+      <section>
+          <div class="h_slide">Single cell RNA-seq</div>
+          <img width="40%" src="plots/Science2013.jpg">
       </section>
       <section>
         <div class="left">
